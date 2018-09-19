@@ -2,5 +2,11 @@
 <resources>
     <string name="app_name">Lab1</string>
     <string name="hello_message">你好!</string>
-    <string name="ButtonText">I\’m a button</string>
+    <string name="ButtonText">按钮</string>
+    <string name="login_message">登录</string>
+    <string name="loginname_message">用户名</string>
+    <string name="password_message">密码</string>
+    <string name="radiobutton_message">单选按钮</string>
+    <string name="checkbox_message">复选按钮</string>
+    <string name="switch_message">这是做什么？</string>
 </resources>

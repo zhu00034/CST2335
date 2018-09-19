@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">My Application</string>
-   // <string name="hello_message">Hello World!</string>
-   // <string name="ButtonText">I\’m a button</string>
+    <string name="hello_message">Hello World!</string>
+    <string name="ButtonText">I\’m a button</string>
     <string name="login_message">Login</string>
     <string name="loginname_message">login name</string>
     <string name="password_message">password</string>
+    <string name="radiobutton_message">Radio Button</string>
+    <string name="checkbox_message">Check Box</string>
+    <string name="switch_message">What does this do?</string>
+
 </resources>
