@@ -8,29 +8,35 @@
     tools:context="com.example.xinji.androidlabs.LoginActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/loginText"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:text="@string/login_message" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/loginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="login name"
         android:inputType="textEmailAddress" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/passwordText"
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:text="@string/password_message" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button"
+        android:id="@+id/loginButton"/>
 
     <ImageView
         android:layout_width="wrap_content"
