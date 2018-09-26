@@ -26,6 +26,7 @@ public class ListItemsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_items);
+        // Lab3 - step 3
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         imageButton = (ImageButton) findViewById(R.id.imageButton);
@@ -41,6 +42,7 @@ public class ListItemsActivity extends Activity {
                 }
         );
 
+        // Lab3 - step 8
         Switch onOffSwitch = (Switch) findViewById(R.id.onOffSwitch);
 
         onOffSwitch.setOnCheckedChangeListener(
@@ -65,6 +67,7 @@ public class ListItemsActivity extends Activity {
                 }
         );
 
+        // Lab3 - step 9
         CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
 
         checkBox.setOnCheckedChangeListener(
@@ -74,6 +77,7 @@ public class ListItemsActivity extends Activity {
                         AlertDialog.Builder builder =
                                 new AlertDialog.Builder(ListItemsActivity.this);
                         //chain together various setter methods to set the dialog characteristics
+                        // Lab3 - step 10
                         builder.setMessage(R.string.dialog_message)//add a dialog message to strings.xml
                                 .setTitle(R.string.dialog_title)
                                 .setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
@@ -99,6 +103,7 @@ public class ListItemsActivity extends Activity {
         );
     }
 
+    // Lab3 - step 2
     @Override
     protected void onResume(){
         super.onResume();

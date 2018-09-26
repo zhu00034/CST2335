@@ -17,9 +17,10 @@ public class StartActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+        // Lab3 - step 3
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
-
+        // Lab3 - step 7
         Button startButton = (Button)findViewById(R.id.button);
 
         startButton.setOnClickListener(new View.OnClickListener(){
@@ -31,9 +32,12 @@ public class StartActivity extends Activity {
             }
         });
     }
+
+    // Lab3 - step 6
     @Override
     public void onActivityResult(int requestCode, int responseCode, Intent data){
 
+        // Lab -step 11
         if(requestCode == 50){
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
         }
@@ -45,7 +49,7 @@ public class StartActivity extends Activity {
         }
     }
 
-
+    // Lab3 - step 2
     @Override
     protected void onResume(){
         super.onResume();

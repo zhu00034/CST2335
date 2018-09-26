@@ -18,8 +18,10 @@ public class LoginActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        // Lab3 - step 3
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
+        // Lab3 - step 4
         final EditText loginEmail = (EditText)findViewById(R.id.loginEmail);
         final SharedPreferences sharedPref =
                 getSharedPreferences("info", Context.MODE_PRIVATE);
@@ -45,6 +47,8 @@ public class LoginActivity extends Activity {
             }
         });
     }
+
+    // Lab3 -  step 2
     @Override
     protected void onResume(){
         super.onResume();
