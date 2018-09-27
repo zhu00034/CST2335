@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
@@ -101,6 +102,22 @@ public class ListItemsActivity extends Activity {
                     }
                 }
         );
+    }
+
+    //Lab3 -step 7
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+
+            Bundle extras = data.getExtras();
+
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+
+            imageButton.setImageBitmap(imageBitmap);
+
+        }
+
     }
 
     // Lab3 - step 2

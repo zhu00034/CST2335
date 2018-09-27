@@ -10,4 +10,10 @@
     <string name="checkbox_message">Check Box</string>
     <string name="switch_message">What does this do?</string>
     <string name="login_button">Login_button</string>
+    <string name="switch_on">Swtich_on</string>
+    <string name="switch_off">Switch_off</string>
+    <string name="ok">Ok</string>
+    <string name="dialog_title">Dialog_title</string>
+    <string name="dialog_message">Do you want to quit</string>
+    <string name="cancel">Cancel</string>
 </resources>
