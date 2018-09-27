@@ -9,4 +9,11 @@
     <string name="radiobutton_message">单选按钮</string>
     <string name="checkbox_message">复选按钮</string>
     <string name="switch_message">这是做什么？</string>
+    <string name="login_button">登陆按钮</string>
+    <string name="switch_on">开关打开</string>
+    <string name="switch_off">开关关闭</string>
+    <string name="ok">同意</string>
+    <string name="dialog_title">主题</string>
+    <string name="dialog_message">你想结束吗？</string>
+    <string name="cancel">取消</string>
 </resources>
