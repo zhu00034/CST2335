@@ -38,10 +38,8 @@ public class StartActivity extends Activity {
     public void onActivityResult(int requestCode, int responseCode, Intent data){
 
         // Lab -step 11
-        if(requestCode == 50){
+        if(requestCode == 50 && responseCode == Activity.RESULT_OK){
             Log.i(ACTIVITY_NAME, "Returned to StartActivity.onActivityResult");
-        }
-        if(responseCode == Activity.RESULT_OK){
             String messagePassed = data.getStringExtra("Response");
 
             Toast toast = Toast.makeText(this, messagePassed, Toast.LENGTH_LONG );
