@@ -21,18 +21,32 @@ public class StartActivity extends Activity {
         Log.i(ACTIVITY_NAME, "In onCreate()");
 
         // Lab3 - step 7
-        Button startButton = (Button)findViewById(R.id.button);
+        Button startButton = (Button) findViewById(R.id.button);
 
-        startButton.setOnClickListener(new View.OnClickListener(){
+        // Lab 4 - step 13
+        startButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 Intent intent =
                         new Intent(StartActivity.this, ListItemsActivity.class);
                 startActivityForResult(intent, 50);
             }
         });
-    }
 
+        // Lab4 - step 2
+        Button chatButton = (Button) findViewById(R.id.startChart_button);
+
+        chatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.i(ACTIVITY_NAME, "User clicked Start Chat");
+                Intent intent = new Intent(StartActivity.this, ChatWindow.class);
+
+                startActivity(intent);
+            }
+        });
+
+}
     // Lab3 - step 6
     @Override
     public void onActivityResult(int requestCode, int responseCode, Intent data){

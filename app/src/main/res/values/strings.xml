@@ -16,4 +16,6 @@
     <string name="dialog_title">Dialog_title</string>
     <string name="dialog_message">Do you want to quit</string>
     <string name="cancel">Cancel</string>
+    <string name="chart_button">Start Chat</string>
+    <string name="send_button">Send</string>
 </resources>

@@ -25,4 +25,11 @@
         tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="267dp" />
 
+    <Button
+        android:id="@+id/startChart_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chart_button" />
+
+
 </LinearLayout>
