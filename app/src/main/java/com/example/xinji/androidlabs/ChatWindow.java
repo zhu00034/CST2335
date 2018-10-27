@@ -19,6 +19,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import static com.example.xinji.androidlabs.ChatDatabaseHelper.TABLE_NAME;
+
 public class ChatWindow extends Activity {
 
     // Lab4 - step 4: create class variable
@@ -28,6 +30,9 @@ public class ChatWindow extends Activity {
     Button sendButton;
 
     ArrayList<String> list = new ArrayList<String>();
+    ChatDatabaseHelper dbHelper;
+    SQLiteDatabase db;
+    Cursor cursor;
 
     ChatAdapter messageAdapter;
 
@@ -41,6 +46,12 @@ public class ChatWindow extends Activity {
         chatView = (ListView) findViewById(R.id.chatview);
         chatEdit = (EditText) findViewById(R.id.chatEdit);
         sendButton = (Button) findViewById(R.id.sendButton);
+
+        //Lab5 - step 5
+        //create a ChatDatabaseHelper object
+        dbHelper = new ChatDatabaseHelper(this);
+        //get a writeable database and stores that as an instance variable
+        db = dbHelper.getWritableDatabase();
 
         // Lab 4 - step 11
         messageAdapter = new ChatAdapter(this);
@@ -58,10 +69,38 @@ public class ChatWindow extends Activity {
                     //clear the textView and ready for a new message
                     chatEdit.setText("");
 
+                    //Lab5 - step 7
+                    //insert rows into the database
+                    ContentValues cValues = new ContentValues();
+                    cValues.put("MESSAGE", chatContent);
+
+                    //Lab5 -step 7
+                    //don't need to insert KEY_ID, because it is autoincrement
+                    db.insert(TABLE_NAME, "", cValues);
                 }
 		    });
 
-}
+
+         //Lab 5 - step 5
+        //execute a query for the existing chat messages
+        //Cursor contains rows from the rawQuery, similar to an iterator
+        cursor = db.rawQuery("select * from " + TABLE_NAME, null);
+        cursor.moveToFirst();
+        while(!cursor.isAfterLast()){
+            Log.i(ACTIVITY_NAME, "SQL MESSAGE:" + cursor.getString(
+                    cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
+            //?
+            list.add(cursor.getString(cursor.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE)));
+            cursor.moveToNext();
+        }
+        Log.i(ACTIVITY_NAME, "Cursor's column count=" + cursor.getColumnCount());
+        //print out the name of columns
+        for(int i=0; i<cursor.getColumnCount();i++){
+            System.out.println(cursor.getColumnName(i));
+        }
+
+
+    }
 
     @Override
     protected void onResume(){
@@ -91,6 +130,12 @@ public class ChatWindow extends Activity {
     @Override
     protected void onDestroy(){
         super.onDestroy();
+
+        //Lab5 - step 9
+        db.close();
+        cursor.close();
+        Log.i(ACTIVITY_NAME, "In onDestroy()");
+
 
     }
 
