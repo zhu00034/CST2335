@@ -5,12 +5,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+
 // Lab5 step 2, 3
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
 
     public static final String DATABASE_NAME = "chat.db";
     public static final String TABLE_NAME = "CHAT";
-    public static final int VERSION_NUM = 7;
+    public static final int VERSION_NUM = 8;
     public static final String KEY_ID = "_id";
     public static final String KEY_MESSAGE = "MESSAGE";
     public static final String ACTIVITY_NAME = "ChatDatabaseHelper";

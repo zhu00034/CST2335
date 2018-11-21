@@ -18,4 +18,8 @@
     <string name="cancel">取消</string>
     <string name="chart_button">开始聊天</string>
     <string name="send_button">发送</string>
+    <string name="weather_check">天气预报</string>
+    <string name="fragment_message">信息</string>
+    <string name="delete_message">删除信息</string>
+
 </resources>

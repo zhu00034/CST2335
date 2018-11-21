@@ -8,14 +8,14 @@
 
     <ListView
         android:id="@+id/chatview"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:id="@+id/chatEdit"
@@ -24,11 +24,22 @@
 
     <Button
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_width="100dp"
+        android:layout_alignParentRight="@+id/chatview"
         android:layout_alignParentBottom="true"
         android:id="@+id/sendButton"
         android:text="@string/send_button"
+        android:layout_toStartOf="@+id/tablet_FrameLayout"
         android:textSize="24sp"/>
+
+
+    <!-- Only on tablet: -->
+    <FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/tablet_FrameLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/chatview"/>
 
 </RelativeLayout>

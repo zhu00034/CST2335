@@ -46,6 +46,15 @@ public class StartActivity extends Activity {
             }
         });
 
+        Button weather_button = (Button)findViewById(R.id.weather_button);
+        weather_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, WeatherForecast.class);
+                startActivity(intent);
+            }
+        });
+
 }
     // Lab3 - step 6
     @Override
@@ -60,6 +69,7 @@ public class StartActivity extends Activity {
             toast.show();
         }
     }
+
 
     // Lab3 - step 2
     @Override

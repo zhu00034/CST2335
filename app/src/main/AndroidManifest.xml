@@ -14,28 +14,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity">
-            <!--
+        <activity android:name=".StartActivity" />
+
+        <!--
             <intent-filter>
 
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+        -->
 
-        </activity>
         <activity android:name=".LoginActivity">
-
-           <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".ListItemsActivity"></activity>
-        <activity android:name=".ChatWindow"></activity>
+        <activity android:name=".ListItemsActivity" />
+        <activity android:name=".ChatWindow" />
+        <activity android:name=".WeatherForecast" />
+        <activity android:name=".MessageDetails" />
     </application>
 
 </manifest>
