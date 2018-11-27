@@ -21,4 +21,8 @@
     <string name="weather_check">Weather Forecast</string>
     <string name="fragment_message">Message Here</string>
     <string name="delete_message">DELETE THIS MESSAGE</string>
+    <string name="title_activity_test_tool_bar">TestToolBar</string>
+    <string name="alertAction2_toolbar">Do you want to go back?</string>
+    <string name="newMessage">New Message</string>
+    <string name="alertAction3_toolbar">Do you want to replace the new message to Snackbar</string>
 </resources>
